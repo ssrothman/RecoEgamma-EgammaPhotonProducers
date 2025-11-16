@@ -1,49 +1,60 @@
 name: "photonObjectCombined"
 platform: "pytorch_libtorch"
-input [{
+input {
   name: "xECAL__0"
   data_type: TYPE_FP32
   dims: [-1, 5]
-}, {
+}
+input {
   name: "fECAL__1"
   data_type: TYPE_INT64
   dims: [-1]
-}, {
+}
+input {
   name: "gain__2"
   data_type: TYPE_INT64
   dims: [-1]
-}, {
+}
+input {
   name: "xES__3"
   data_type: TYPE_FP32
   dims: [-1, 4]
-}, {
+}
+input {
   name: "fES__4"
   data_type: TYPE_INT64
   dims: [-1]
-}, {
+}
+input {
   name: "graph_x__5"
   data_type: TYPE_FP32
   dims: [-1, 2]
-}, {
+}
+input {
   name: "xECAL_batch__6"
   data_type: TYPE_INT64
   dims: [-1]
-}, {
+}
+input {
   name: "xES_batch__7"
   data_type: TYPE_INT64
   dims: [-1]
-}]
-output [{
+}
+output {
   name: "combined_output__0"
   data_type: TYPE_FP32
   dims: [-1, 11]
-}]
+}
 model_repository_agents {
-  agents [{
+  agents {
     name: "checksum"
     parameters {
       key: "MD5:1/model.pt"
       value: "f748cae32aac4b078dfa2f8f77715984"
     }
-  }]
+    parameters {
+      key: "MD5:2/model.pt"
+      value: "f0d8875d06fa39de9cd168f0ab71f091"
+    }
+  }
 }
